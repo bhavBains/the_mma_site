@@ -1,0 +1,19 @@
+{
+  "name": "mmasite",
+  "version": "1.0.0",
+  "description": "Simplistic view to check upcoming mma events",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.0.0",
+    "mongoose": "^5.9.7",
+    "nodemon": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bhavBains",
+  "license": "ISC"
+}
