@@ -1,5 +1,7 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import ReactDOM from "react-dom";
+import "./styles/main.css";
 import * as serviceWorker from "./serviceWorker";
 import { ApolloClient } from "apollo-client";
 import { ApolloProvider } from "react-apollo";
@@ -12,22 +14,13 @@ import App from "./App";
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri: "http://127.0.0.1:5000/graphql",
+  uri: "http://localhost:5000/graphql",
 });
 
 const client = new ApolloClient({
   cache,
   link,
 });
-
-// const client = new ApolloClient({
-//   // // It will refetch data, rerender the component if data is modified. No need to rerender manually
-//   // dataIdFromObject: (o) => o.id,
-//   link: new createHttpLink({
-//     uri: "/graphql",
-//     // credentials: "same-origin",
-//   }),
-// });
 
 const Root = () => {
   return (
