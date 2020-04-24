@@ -1,0 +1,23 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-card {
+  // border: solid 0.5px;
+  border-radius: 50px;
+  background-color: $primary-color;
+  color: $text-color;
+  display: block;
+  text-transform: uppercase;
+  .center {
+    @include flexCenter();
+  }
+
+  .event-fighter-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
