@@ -12,6 +12,12 @@
   color: #fff;
   display: block;
   text-transform: uppercase;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.32, -0.27, 0, 3.19);
+          transition-timing-function: cubic-bezier(0.32, -0.27, 0, 3.19);
 }
 
 .event-card .center {
@@ -47,7 +53,7 @@
 body {
   line-height: 1.5;
   margin: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
