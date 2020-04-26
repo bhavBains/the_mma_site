@@ -1,7 +1,3 @@
-@import "./variables";
-@import "./header";
-@import "./eventsList";
-
 * {
   box-sizing: border-box;
 }
@@ -12,3 +8,8 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
 }
+
+@import "./variables";
+@import "./header";
+@import "./eventsList";
+@import "./eventDetails";

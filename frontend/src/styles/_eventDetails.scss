@@ -1,0 +1,37 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-details {
+  margin: 0;
+  padding: 0;
+  background-color: $primary-color;
+
+  .details-card {
+    @include flexCenter();
+    flex-direction: column;
+    background-color: #fff;
+
+    .heading {
+      color: $primary-color;
+    }
+
+    .sub-heading {
+      color: $secondary-color;
+    }
+
+    .fight-list {
+      border-bottom: $primary-color 2px solid;
+      border-radius: 10px;
+      @include flexCenter();
+      flex-direction: column;
+
+      .fighters-info {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
