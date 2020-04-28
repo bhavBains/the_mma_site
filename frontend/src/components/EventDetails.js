@@ -16,7 +16,7 @@ class EventDetails extends Component {
             <h3 className="heading my-3">MAIN CARD</h3>
 
             <ul className="list-group my-2 w-100">
-              <li className="list-group-item p-2 my-2 fight-list">
+              <li className="list-group-item p-2 my-2 fight-list shadow">
                 <h6 className="sub-heading my-2">Lightweight</h6>
                 <div className="fighters-info w-100">
                   <div>
