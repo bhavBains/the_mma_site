@@ -1,3 +1,5 @@
+@import "./variables";
+
 * {
   box-sizing: border-box;
 }
@@ -6,10 +8,19 @@ body {
   line-height: 1.5;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
-@import "./variables";
+.heading {
+  color: $primary-color;
+  font-weight: 900;
+}
+
+.sub-heading {
+  color: $secondary-color;
+}
+
 @import "./header";
 @import "./eventsList";
 @import "./eventDetails";
+@import "./fighterDetails";

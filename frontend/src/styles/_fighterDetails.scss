@@ -1,0 +1,18 @@
+#fighter-details {
+  .heading {
+    @include flexCenter();
+  }
+
+  .fighter-image {
+    @include flexCenter();
+  }
+
+  .list-group-item {
+    text-transform: uppercase;
+    border: none;
+    border-bottom: solid 2px $primary-color;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    // font-weight: 900;
+  }
+}

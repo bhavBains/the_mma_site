@@ -6,12 +6,11 @@ class Header extends Component {
     return (
       <div>
         <Navbar
-          // fixed="top"
           sticky="top"
           className="justify-content-center header"
           bg="light"
         >
-          <Navbar.Brand className="text-color" href="#">
+          <Navbar.Brand className="text-color" href="/">
             <h3>THE MMA SITE</h3>
           </Navbar.Brand>
         </Navbar>

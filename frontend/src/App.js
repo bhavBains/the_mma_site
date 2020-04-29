@@ -7,6 +7,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./components/Header";
 import EventsList from "./components/EventsList";
 import EventDetails from "./components/EventDetails";
+import FighterDetails from "./components/FighterDetails";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Route exact path="/" component={EventsList} />
         <Route exact path="/details" component={EventDetails} />
+        <Route path="/fighter" component={FighterDetails} />
       </BrowserRouter>
     </div>
   );

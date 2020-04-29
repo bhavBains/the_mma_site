@@ -22,7 +22,7 @@ class EventDetails extends Component {
                   <div>
                     <img
                       src="https://images.pexels.com/photos/2605587/pexels-photo-2605587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                      alt="fighter-image"
+                      alt="fighter"
                       className="rounded-circle m-2 p-1"
                       height="80px"
                       width="80px"
@@ -33,7 +33,7 @@ class EventDetails extends Component {
                   <div>
                     <img
                       src="https://images.pexels.com/photos/2605587/pexels-photo-2605587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                      alt="fighter-image"
+                      alt="fighter"
                       className="rounded-circle m-2 p-1"
                       height="80px"
                       width="80px"
