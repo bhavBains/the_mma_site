@@ -4,15 +4,22 @@
 }
 
 body {
-  line-height: 1.5;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  background: #fff;
+  color: #000;
+  line-height: 1.5;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 1.5rem;
+}
+
+.dark-mode {
+  background: #000;
 }
 
 .heading {
   color: #e0777d;
   font-weight: 900;
+  font-family: "Special Elite", cursive;
 }
 
 .sub-heading {
@@ -21,10 +28,53 @@ body {
 
 .header {
   border-bottom: solid 2px #e0777d;
+  margin-right: 0;
 }
 
 .header .text-color {
   color: #e0777d;
+}
+
+.header .text-color h3 {
+  font-family: "Permanent Marker", sans-serif;
+}
+
+.dark-mode-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #e0777d;
+}
+
+.dark-mode-icon .light-sun {
+  display: none;
+}
+
+.active-dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.active-dark .light-sun {
+  display: block;
+}
+
+.active-dark .dark-moon {
+  display: none;
 }
 
 .event-card {
@@ -114,6 +164,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  color: #e0777d;
 }
 
 #fighter-details .heading {
@@ -146,5 +197,47 @@ body {
   border-bottom: solid 2px #e0777d;
   border-radius: 15px;
   font-size: 0.8rem;
+}
+
+#fighter-history .fight-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+#fighter-history .result-opponent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#fighter-history .result-details ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #7ea16b;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

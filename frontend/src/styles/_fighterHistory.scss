@@ -1,0 +1,24 @@
+#fighter-history {
+  .fight-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .result-opponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .result-details {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      color: $secondary-color;
+      align-items: center;
+    }
+  }
+}

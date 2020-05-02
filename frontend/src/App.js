@@ -8,11 +8,15 @@ import Header from "./components/Header";
 import EventsList from "./components/EventsList";
 import EventDetails from "./components/EventDetails";
 import FighterDetails from "./components/FighterDetails";
+import VideoBackground from "./components/VideoBackground";
+import DarkMode from "./components/ActivateDarkMode";
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <DarkMode />
+      <VideoBackground />
       <BrowserRouter>
         <Route exact path="/" component={EventsList} />
         <Route exact path="/details" component={EventDetails} />

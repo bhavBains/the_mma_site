@@ -1,6 +1,12 @@
 .header {
   border-bottom: solid 2px $primary-color;
+  margin-right: 0;
+
   .text-color {
     color: $primary-color;
+
+    h3 {
+      font-family: "Permanent Marker", sans-serif;
+    }
   }
 }

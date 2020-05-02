@@ -1,3 +1,6 @@
-$primary-color: lighten(#e0777d, 0%);
+$primary-color: #e0777d !default;
 $secondary-color: #7ea16b;
 $text-color: #fff;
+$light: #fff;
+$dark: #000;
+$background: $light !default;

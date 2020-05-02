@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+// import PieChart from "./PieCharts";
+import FighterHistory from "./FighterHistory";
+
 class FighterDetails extends Component {
   render() {
     return (
@@ -18,7 +21,7 @@ class FighterDetails extends Component {
               />
             </Col>
           </Row>
-          <ul className="list-group px-4">
+          <ul className="list-group mb-5 px-4">
             <li className="list-group-item m-1">
               <Row className="ml-2">
                 <Col xs="4">Age</Col>
@@ -74,6 +77,12 @@ class FighterDetails extends Component {
               </Row>
             </li>
           </ul>
+          <h3 className="heading">Fight Results</h3>
+          <FighterHistory />
+          <FighterHistory />
+          <FighterHistory />
+          <FighterHistory />
+          <FighterHistory />
         </Container>
       </div>
     );

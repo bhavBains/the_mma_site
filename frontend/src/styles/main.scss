@@ -5,15 +5,22 @@
 }
 
 body {
-  line-height: 1.5;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  background: $background;
+  color: $dark;
+  line-height: 1.5;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 1.5rem;
+}
+
+.dark-mode {
+  background: $dark;
 }
 
 .heading {
   color: $primary-color;
   font-weight: 900;
+  font-family: "Special Elite", cursive;
 }
 
 .sub-heading {
@@ -24,3 +31,4 @@ body {
 @import "./eventsList";
 @import "./eventDetails";
 @import "./fighterDetails";
+@import "./fighterHistory";

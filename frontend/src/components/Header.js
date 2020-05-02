@@ -5,11 +5,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <Navbar
-          sticky="top"
-          className="justify-content-center header"
-          bg="light"
-        >
+        <Navbar sticky="top" className="justify-content-center header">
           <Navbar.Brand className="text-color" href="/">
             <h3>THE MMA SITE</h3>
           </Navbar.Brand>

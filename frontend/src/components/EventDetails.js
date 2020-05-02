@@ -27,8 +27,8 @@ class EventDetails extends Component {
                       height="80px"
                       width="80px"
                     />
-                    <h6 className="heading">CONOR MCGREGOR</h6>
-                    <h6 className="heading">18-4-0</h6>
+                    <h6 className="">CONOR MCGREGOR</h6>
+                    <h6 className="">18-4-0</h6>
                   </div>
                   <div>
                     <img
@@ -38,8 +38,8 @@ class EventDetails extends Component {
                       height="80px"
                       width="80px"
                     />
-                    <h6 className="heading">JUSTIN GAETHGE</h6>
-                    <h6 className="heading">18-4-0</h6>
+                    <h6 className="">JUSTIN GAETHGE</h6>
+                    <h6 className="">18-4-0</h6>
                   </div>
                 </div>
               </li>

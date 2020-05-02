@@ -4,8 +4,27 @@
   align-items: center;
 }
 
+.dark-mode-icon {
+  @include flexCenter();
+  color: $primary-color;
+
+  .light-sun {
+    display: none;
+  }
+}
+
+.active-dark {
+  @include flexCenter();
+  color: $text-color;
+  .light-sun {
+    display: block;
+  }
+  .dark-moon {
+    display: none;
+  }
+}
+
 .event-card {
-  // border: solid 0.5px;
   border-radius: 50px;
   background-color: $primary-color;
   color: $text-color;
