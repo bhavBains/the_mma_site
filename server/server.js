@@ -1,6 +1,7 @@
 const express = require("express");
 const expressGraphQL = require("express-graphql");
 const schema = require("./schema/schema");
+
 // Initiate app
 const app = express();
 
@@ -12,16 +13,17 @@ app.use(
   })
 );
 
+// Production Build for deployment
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("frontend/build"));
 
   const path = require("path");
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
   });
 }
 
-module.exports = app;
+// CORS Middleware
 app.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
@@ -34,3 +36,5 @@ app.use(function (req, res, next) {
   );
   next();
 });
+
+module.exports = app;

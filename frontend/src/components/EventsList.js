@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import gql from "graphql-tag";
+import { graphql } from "react-apollo";
 
 class EventsList extends Component {
-  render() {
-    return (
-      <Container>
-        <Link to="/details">
+  renderEvents() {
+    return this.props.data.events.map((event) => {
+      return (
+        <li className="list-group-item">
           <div className="event-card mx-auto shadow-lg p-3 m-4 badge">
             <Row style={{ flexDirection: "column" }}>
-              <Col className="center m-1">UFC 250</Col>
+              <Col className="center m-1">{event.eventTitle}</Col>
               <Col className="center m-1">Lightweight bout</Col>
             </Row>
             <Row>
@@ -23,7 +25,7 @@ class EventsList extends Component {
                     width="80px"
                   />
                 </div>
-                <div className="fighter-info">info</div>
+                <div className="fighter-info">{event.fighter}</div>
               </Col>
               <Col className="center">VS</Col>
               <Col className="event-fighter-mini">
@@ -42,10 +44,35 @@ class EventsList extends Component {
             <Row className="center m-3">Date/Time</Row>
             <Row className="center m-3">Venue</Row>
           </div>
+        </li>
+      );
+    });
+  }
+
+  componentDidMount() {
+    this.renderEvents();
+  }
+
+  render() {
+    console.log(this.props.data.events);
+    return (
+      <Container>
+        <Link to="/details">
+          <ul className="list-group">{this.renderEvents()}</ul>
         </Link>
       </Container>
     );
   }
 }
 
-export default EventsList;
+const query = gql`
+  {
+    events {
+      id
+      fighter
+      eventTitle
+    }
+  }
+`;
+
+export default graphql(query)(EventsList);

@@ -55,10 +55,9 @@ const FighterType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
-    event: {
+    events: {
       type: new GraphQLList(EventType),
       resolve(parentValue, args) {
-        // console.log(parentValue, "args is : ", args);
         return fakeData.event;
       },
     },

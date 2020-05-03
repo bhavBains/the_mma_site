@@ -16,6 +16,12 @@ body {
   background: #000;
 }
 
+a,
+a:hover {
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
 .heading {
   color: #e0777d;
   font-weight: 900;
