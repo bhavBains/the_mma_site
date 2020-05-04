@@ -6,7 +6,7 @@ class EventDetails extends Component {
     return (
       <div className="event-details">
         <Container>
-          <div className="details-card p-1 rounded-lg border border-4">
+          <div className="details-card p-1 my-2">
             <h2 className="heading my-3">UFC 250</h2>
             <h6 className="sub-heading my-1">VENUE: T-MOBILE ARENA</h6>
             <h6 className="sub-heading my-1">SAT MARCH 7</h6>

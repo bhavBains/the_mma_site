@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class ActivateDarkMode extends Component {
-  toggleDarkMode(event) {
+  toggleDarkMode() {
     // activate dark mode
     document.body.classList.toggle("dark-mode");
 

@@ -8,60 +8,65 @@ class EventsList extends Component {
   renderEvents() {
     return this.props.data.events.map((event) => {
       return (
-        <li className="list-group-item">
-          <div className="event-card mx-auto shadow-lg p-3 m-4 badge">
-            <Row style={{ flexDirection: "column" }}>
-              <Col className="center m-1">{event.eventTitle}</Col>
-              <Col className="center m-1">Lightweight bout</Col>
-            </Row>
-            <Row>
-              <Col className="event-fighter-mini">
-                <div className="fighter-image">
-                  <img
-                    src="https://images.pexels.com/photos/2605587/pexels-photo-2605587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                    alt="fighter"
-                    className="rounded-circle m-2 p-1"
-                    height="80px"
-                    width="80px"
-                  />
-                </div>
-                <div className="fighter-info">{event.fighter}</div>
-              </Col>
-              <Col className="center">VS</Col>
-              <Col className="event-fighter-mini">
-                <div className="fighter-image">
-                  <img
-                    src="https://images.pexels.com/photos/1722198/pexels-photo-1722198.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-                    alt="fighter"
-                    className="rounded-circle m-2 p-1"
-                    height="80px"
-                    width="80px"
-                  />
-                </div>
-                <div className="fighter-info">info</div>
-              </Col>
-            </Row>
-            <Row className="center m-3">Date/Time</Row>
-            <Row className="center m-3">Venue</Row>
-          </div>
-        </li>
+        <Link to="/details" key={event.id}>
+          <li className="event-list">
+            <div className="event-card mx-auto shadow-lg p-3 m-4 badge">
+              <Row style={{ flexDirection: "column" }}>
+                <Col className="center m-1">{event.eventTitle}</Col>
+                <Col className="center m-1">Lightweight bout</Col>
+              </Row>
+              <Row>
+                <Col className="event-fighter-mini">
+                  <div className="fighter-image">
+                    <img
+                      src="https://images.pexels.com/photos/2605587/pexels-photo-2605587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                      alt="fighter"
+                      className="rounded-circle m-2 p-1"
+                      height="80px"
+                      width="80px"
+                    />
+                  </div>
+                  <div className="fighter-info">{event.fighter}</div>
+                </Col>
+                <Col className="center">VS</Col>
+                <Col className="event-fighter-mini">
+                  <div className="fighter-image">
+                    <img
+                      src="https://images.pexels.com/photos/1722198/pexels-photo-1722198.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                      alt="fighter"
+                      className="rounded-circle m-2 p-1"
+                      height="80px"
+                      width="80px"
+                    />
+                  </div>
+                  <div className="fighter-info">info</div>
+                </Col>
+              </Row>
+              <Row className="center m-3">Date/Time</Row>
+              <Row className="center m-3">Venue</Row>
+            </div>
+          </li>
+        </Link>
       );
     });
   }
 
-  componentDidMount() {
-    this.renderEvents();
-  }
+  // componentDidMount() {
+  //   // this.renderEvents();
+  //   console.log(this.props);
+  // }
+
+  // renderEvents() {
+  //   return console.log(this.props.data);
+  // }
 
   render() {
-    console.log(this.props.data.events);
-    return (
-      <Container>
-        <Link to="/details">
-          <ul className="list-group">{this.renderEvents()}</ul>
-        </Link>
-      </Container>
-    );
+    // On Page Loading
+    if (this.props.data.loading) return <h3></h3>; //Place loading image/animations here
+
+    if (!this.props.data.loading) {
+      return <Container>{this.renderEvents()}</Container>;
+    }
   }
 }
 

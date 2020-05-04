@@ -24,24 +24,38 @@
   }
 }
 
-.event-card {
-  border-radius: 50px;
-  background-color: $primary-color;
-  color: $text-color;
-  display: block;
-  text-transform: uppercase;
+.event-list {
+  list-style: none;
 
-  transform: translate(0%);
-  transition: 1s;
-  transition-timing-function: cubic-bezier(0.32, -0.27, 0, 3.19);
+  .event-card {
+    .row {
+      flex-wrap: nowrap;
+    }
 
-  .center {
-    @include flexCenter();
-  }
+    border-radius: 50px;
+    background-color: $primary-color;
+    color: $text-color;
+    display: block;
+    text-transform: uppercase;
 
-  .event-fighter-mini {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    transform: translate(0%);
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.32, -0.27, 0, 3.19);
+
+    .center {
+      @include flexCenter();
+    }
+
+    .event-fighter-mini {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .fighter-info {
+      align-self: center;
+      justify-self: center;
+    }
   }
 }

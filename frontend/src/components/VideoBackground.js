@@ -12,7 +12,7 @@ class VideoBackground extends Component {
       zIndex: "-50",
       objectFit: "cover",
       transform: "translate(-50%, -50%)",
-      opacity: "0.1",
+      opacity: "0.2",
       position: "fixed",
       // position: "absolute",
     };

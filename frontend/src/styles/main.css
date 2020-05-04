@@ -83,7 +83,11 @@ a:hover {
   display: none;
 }
 
-.event-card {
+.event-list {
+  list-style: none;
+}
+
+.event-list .event-card {
   border-radius: 50px;
   background-color: #e0777d;
   color: #fff;
@@ -97,7 +101,12 @@ a:hover {
           transition-timing-function: cubic-bezier(0.32, -0.27, 0, 3.19);
 }
 
-.event-card .center {
+.event-list .event-card .row {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.event-list .event-card .center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,7 +118,7 @@ a:hover {
           align-items: center;
 }
 
-.event-card .event-fighter-mini {
+.event-list .event-card .event-fighter-mini {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,12 +129,21 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.event-list .event-card .fighter-info {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .event-details {
   margin: 0;
   padding: 0;
-  background-color: #e0777d;
 }
 
 .event-details .details-card {
@@ -142,7 +160,6 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #fff;
 }
 
 .event-details .details-card .fight-list {

@@ -14,13 +14,13 @@ import DarkMode from "./components/ActivateDarkMode";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <DarkMode />
-      <VideoBackground />
       <BrowserRouter>
+        <Header />
+        <VideoBackground />
+        <DarkMode />
         <Route exact path="/" component={EventsList} />
         <Route exact path="/details" component={EventDetails} />
-        <Route path="/fighter" component={FighterDetails} />
+        <Route exact path="/fighter" component={FighterDetails} />
       </BrowserRouter>
     </div>
   );
