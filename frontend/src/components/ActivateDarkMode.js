@@ -4,6 +4,7 @@ class ActivateDarkMode extends Component {
   toggleDarkMode() {
     // activate dark mode
     document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
 
     // change the icons
     const dark = document.querySelector(".dark-mode-icon");

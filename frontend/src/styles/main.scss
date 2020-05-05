@@ -1,4 +1,21 @@
-@import "./variables";
+// @import "./variablesLight";
+// @import "./variablesDark";
+
+$light: #fff;
+$dark: #000;
+$primary-color: #e0777d;
+$secondary-color: #7ea16b;
+$text-color: #fff;
+
+@mixin theme-colors($light-theme: true) {
+  @if $light-theme {
+    background-color: $light;
+    color: $text-color;
+  } @else {
+    background-color: $dark;
+    color: $text-color;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -6,21 +23,21 @@
 
 body {
   margin: 0;
-  background: $background;
-  color: $dark;
   line-height: 1.5;
   font-family: "Baloo Bhaina 2", cursive;
   font-size: 1.5rem;
-}
 
-.dark-mode {
-  background: $dark;
-}
+  .light-mode {
+    // background: $light;
+    // color: $dark;
+    @include theme-colors($light-theme: true);
+  }
 
-a,
-a:hover {
-  text-decoration: none !important;
-  cursor: pointer !important;
+  .dark-mode {
+    // background: #000;
+    // color: $light;
+    @include theme-colors($light-theme: false);
+  }
 }
 
 .heading {

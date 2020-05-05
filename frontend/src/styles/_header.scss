@@ -4,9 +4,16 @@
 
   .text-color {
     color: $primary-color;
+    &:hover {
+      color: $light;
+    }
 
     h3 {
       font-family: "Permanent Marker", sans-serif;
+
+      &:hover {
+        color: $light;
+      }
     }
   }
 }
