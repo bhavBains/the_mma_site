@@ -1,0 +1,30 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode-icon {
+  @include flexCenter();
+  color: $primary-color;
+
+  i {
+    cursor: pointer;
+  }
+
+  .light-sun {
+    display: none;
+  }
+}
+
+.active-dark {
+  @include flexCenter();
+  color: $text-color;
+
+  .light-sun {
+    display: block;
+  }
+  .dark-moon {
+    display: none;
+  }
+}

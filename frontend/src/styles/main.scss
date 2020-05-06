@@ -1,21 +1,10 @@
-// @import "./variablesLight";
-// @import "./variablesDark";
-
 $light: #fff;
 $dark: #000;
 $primary-color: #e0777d;
 $secondary-color: #7ea16b;
 $text-color: #fff;
-
-@mixin theme-colors($light-theme: true) {
-  @if $light-theme {
-    background-color: $light;
-    color: $text-color;
-  } @else {
-    background-color: $dark;
-    color: $text-color;
-  }
-}
+$primary-color-dark: #028090;
+$secondary-color-dark: #00a896;
 
 * {
   box-sizing: border-box;
@@ -27,17 +16,13 @@ body {
   font-family: "Baloo Bhaina 2", cursive;
   font-size: 1.5rem;
 
-  .light-mode {
-    // background: $light;
-    // color: $dark;
-    @include theme-colors($light-theme: true);
-  }
+  background-color: $light;
+  color: $light;
+  transition: ease-out all 0.3s;
+}
 
-  .dark-mode {
-    // background: #000;
-    // color: $light;
-    @include theme-colors($light-theme: false);
-  }
+.dark-mode {
+  background-color: $dark;
 }
 
 .heading {
@@ -50,6 +35,7 @@ body {
   color: $secondary-color;
 }
 
+@import "./activateDarkMode";
 @import "./header";
 @import "./eventsList";
 @import "./eventDetails";

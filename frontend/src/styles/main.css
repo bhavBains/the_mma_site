@@ -8,16 +8,14 @@ body {
   line-height: 1.5;
   font-family: "Baloo Bhaina 2", cursive;
   font-size: 1.5rem;
-}
-
-body .light-mode {
   background-color: #fff;
   color: #fff;
+  -webkit-transition: ease-out all 0.3s;
+  transition: ease-out all 0.3s;
 }
 
-body .dark-mode {
+.dark-mode {
   background-color: #000;
-  color: #fff;
 }
 
 .heading {
@@ -28,27 +26,6 @@ body .dark-mode {
 
 .sub-heading {
   color: #7ea16b;
-}
-
-.header {
-  border-bottom: solid 2px #e0777d;
-  margin-right: 0;
-}
-
-.header .text-color {
-  color: #e0777d;
-}
-
-.header .text-color:hover {
-  color: #fff;
-}
-
-.header .text-color h3 {
-  font-family: "Permanent Marker", sans-serif;
-}
-
-.header .text-color h3:hover {
-  color: #fff;
 }
 
 .dark-mode-icon {
@@ -62,6 +39,10 @@ body .dark-mode {
       -ms-flex-align: center;
           align-items: center;
   color: #e0777d;
+}
+
+.dark-mode-icon i {
+  cursor: pointer;
 }
 
 .dark-mode-icon .light-sun {
@@ -87,6 +68,32 @@ body .dark-mode {
 
 .active-dark .dark-moon {
   display: none;
+}
+
+.header {
+  border-bottom: solid 2px #e0777d;
+  margin-right: 0;
+}
+
+.header .text-color {
+  color: #e0777d;
+}
+
+.header .text-color:hover {
+  color: #fff;
+}
+
+.header .text-color h3 {
+  font-family: "Permanent Marker", sans-serif;
+}
+
+.header .text-color h3:hover {
+  color: #fff;
+}
+
+a,
+a:hover {
+  text-decoration: none;
 }
 
 .event-list {
