@@ -16,8 +16,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <VideoBackground />
         <DarkMode />
+        <VideoBackground />
         <Route exact path="/" component={EventsList} />
         <Route exact path="/details" component={EventDetails} />
         <Route exact path="/fighter" component={FighterDetails} />

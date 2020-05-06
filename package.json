@@ -20,7 +20,7 @@
     "server": "nodemon index.js",
     "frontend": "npm run start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && INLINE_RUNTIME_CHUNK=false npm run build --prefix frontend"
   },
   "author": "bhavBains",
   "license": "ISC"

@@ -14,21 +14,12 @@ class ActivateDarkMode extends Component {
     }
   }
 
-  enableDarkMode(mode) {
-    // document.body.classList.add("dark-mode");
-
-    localStorage.setItem("darkMode", "enabled");
-  }
-
-  disableDarkMode(mode) {
-    console.log(mode);
-    // document.body.classList.remove("dark-mode");
-    localStorage.setItem("darkMode", "disabled");
-    console.log(localStorage.getItem("darkMode"));
-  }
-
   componentDidMount() {
     const darkMode = localStorage.getItem("darkMode");
+    // check for darkMode object in local storage if any
+    if (!darkMode) {
+      localStorage.setItem("darkMode", "enabled");
+    }
     if (darkMode === "enabled") {
       document.body.classList.add("dark-mode");
       // change the icons
