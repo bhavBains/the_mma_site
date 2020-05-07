@@ -6,11 +6,12 @@ import { graphql } from "react-apollo";
 
 class EventsList extends Component {
   renderEvents() {
+    // console.log(this.props.data.events);
     return this.props.data.events.map((event) => {
       return (
         <Link to="/details" key={event.id}>
           <li className="event-list">
-            <div className="event-card mx-auto shadow-lg p-3 m-4 badge">
+            <div className="event-card mx-auto shadow-lg p-3 m-2 mb-4 badge">
               <Row style={{ flexDirection: "column" }}>
                 <Col className="center m-1">{event.eventTitle}</Col>
                 <Col className="center m-1">Lightweight bout</Col>
@@ -51,15 +52,6 @@ class EventsList extends Component {
     });
   }
 
-  // componentDidMount() {
-  //   // this.renderEvents();
-  //   console.log(this.props);
-  // }
-
-  // renderEvents() {
-  //   return console.log(this.props.data);
-  // }
-
   render() {
     // On Page Loading
     if (this.props.data.loading) return <h3></h3>; //Place loading image/animations here
@@ -70,7 +62,7 @@ class EventsList extends Component {
   }
 }
 
-const query = gql`
+const eventsQuery = gql`
   {
     events {
       id
@@ -80,4 +72,4 @@ const query = gql`
   }
 `;
 
-export default graphql(query)(EventsList);
+export default graphql(eventsQuery)(EventsList);

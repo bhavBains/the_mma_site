@@ -34,7 +34,7 @@ class ActivateDarkMode extends Component {
   render() {
     return (
       <div>
-        <div className="dark-mode-icon mt-3">
+        <div className="dark-mode-icon my-3">
           <div onClick={this.toggleDarkMode}>
             <i className="fas fa-cloud-sun light-sun"></i>
             <i className="fas fa-cloud-moon dark-moon"></i>
