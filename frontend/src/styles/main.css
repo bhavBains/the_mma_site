@@ -98,6 +98,11 @@ a:hover {
 
 .event-list {
   list-style: none;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 80%;
 }
 
 .event-list .event-card {
@@ -115,6 +120,11 @@ a:hover {
 .event-list .event-card .row {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+}
+
+.event-list .event-card .row .col {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .event-list .event-card .bounce-in {
@@ -148,12 +158,17 @@ a:hover {
       flex-wrap: wrap;
 }
 
-.event-list .event-card .fighter-info {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .event-list {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .event-list {
+    max-width: 50%;
+  }
 }
 
 .event-details {

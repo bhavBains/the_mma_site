@@ -18,7 +18,7 @@ class EventsList extends Component {
           <Link to="/details">
             <div
               className="event-card shadow-lg p-3 m-2 mb-4 badge"
-              ref={(node) => (this._eventCard = node)}
+              ref={this._eventCard}
             >
               <Row style={{ flexDirection: "column" }}>
                 <Col className="center m-1">{event.eventTitle}</Col>
