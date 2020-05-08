@@ -5,13 +5,21 @@ import gql from "graphql-tag";
 import { graphql } from "react-apollo";
 
 class EventsList extends Component {
-  renderEvents() {
-    // console.log(this.props.data.events);
+  constructor(props) {
+    super(props);
+
+    this._eventCard = React.createRef();
+  }
+
+  renderEvents = () => {
     return this.props.data.events.map((event) => {
       return (
-        <Link to="/details" key={event.id}>
-          <li className="event-list">
-            <div className="event-card mx-auto shadow-lg p-3 m-2 mb-4 badge">
+        <li className="event-list" key={event.id}>
+          <Link to="/details">
+            <div
+              className="event-card shadow-lg p-3 m-2 mb-4 badge"
+              ref={(node) => (this._eventCard = node)}
+            >
               <Row style={{ flexDirection: "column" }}>
                 <Col className="center m-1">{event.eventTitle}</Col>
                 <Col className="center m-1">Lightweight bout</Col>
@@ -46,10 +54,14 @@ class EventsList extends Component {
               <Row className="center m-3">Date/Time</Row>
               <Row className="center m-3">Venue</Row>
             </div>
-          </li>
-        </Link>
+          </Link>
+        </li>
       );
     });
+  };
+
+  componentDidUpdate() {
+    console.log(this._eventCard);
   }
 
   render() {
@@ -57,7 +69,11 @@ class EventsList extends Component {
     if (this.props.data.loading) return <h3></h3>; //Place loading image/animations here
 
     if (!this.props.data.loading) {
-      return <Container>{this.renderEvents()}</Container>;
+      return (
+        <div>
+          <Container>{this.renderEvents()}</Container>
+        </div>
+      );
     }
   }
 }

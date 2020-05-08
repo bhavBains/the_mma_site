@@ -22,10 +22,17 @@ a:hover {
     color: $text-color;
     display: block;
     text-transform: uppercase;
+    // display: none;
 
-    transform: translate(0%);
-    transition: 1s;
+    // transform: translate(100%);
+    transition: 0.5s;
     transition-timing-function: cubic-bezier(0.32, -0.27, 0, 3.19);
+
+    .bounce-in {
+      // transform: translate(0%);
+      // display: block;
+      text-transform: lowercase;
+    }
 
     .center {
       @include flexCenter();

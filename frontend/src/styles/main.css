@@ -106,10 +106,8 @@ a:hover {
   color: #fff;
   display: block;
   text-transform: uppercase;
-  -webkit-transform: translate(0%);
-          transform: translate(0%);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   -webkit-transition-timing-function: cubic-bezier(0.32, -0.27, 0, 3.19);
           transition-timing-function: cubic-bezier(0.32, -0.27, 0, 3.19);
 }
@@ -117,6 +115,10 @@ a:hover {
 .event-list .event-card .row {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+}
+
+.event-list .event-card .bounce-in {
+  text-transform: lowercase;
 }
 
 .event-list .event-card .center {
