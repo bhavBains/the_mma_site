@@ -24,6 +24,13 @@ const fakeData = {
     },
     {
       id: "5e98f57282418f91ead3dc88",
+      fighter: "Khabib nurmagadove",
+      eventTitle: "ufc 249",
+    },
+    {
+      id: "5e98f57282418f91ead3dc88",
+      fighter: "Khabib nurmagadove",
+      eventTitle: "ufc 249",
     },
   ],
 };
