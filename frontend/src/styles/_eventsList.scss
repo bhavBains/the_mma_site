@@ -11,6 +11,7 @@ a:hover {
 
 .event-list {
   list-style: none;
+  margin: auto;
 
   .event-card {
     .row {
@@ -42,12 +43,26 @@ a:hover {
       display: flex;
       flex-direction: column;
       align-items: center;
-      flex-wrap: wrap;
+      white-space: normal;
     }
+  }
+}
 
-    .fighter-info {
-      align-self: center;
-      justify-self: center;
+@media screen and (min-width: 768px) {
+  .event-list {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .event-list {
+      margin: auto;
+      width: 50%;
     }
   }
 }

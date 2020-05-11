@@ -25,7 +25,7 @@ class EventsList extends Component {
                 <Col className="center m-1">Lightweight bout</Col>
               </Row>
               <Row>
-                <Col className="event-fighter-mini">
+                <Col xs={5} className="event-fighter-mini">
                   <div className="fighter-image">
                     <img
                       src="https://images.pexels.com/photos/2605587/pexels-photo-2605587.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -35,10 +35,14 @@ class EventsList extends Component {
                       width="80px"
                     />
                   </div>
-                  <div className="fighter-info">{event.fighter}</div>
+                  <div className="fighter-info">
+                    <p>{event.fighter}</p>
+                  </div>
                 </Col>
-                <Col className="center">VS</Col>
-                <Col className="event-fighter-mini">
+                <Col xs={2} className="center">
+                  VS
+                </Col>
+                <Col xs={5} className="event-fighter-mini">
                   <div className="fighter-image">
                     <img
                       src="https://images.pexels.com/photos/1722198/pexels-photo-1722198.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
@@ -48,7 +52,9 @@ class EventsList extends Component {
                       width="80px"
                     />
                   </div>
-                  <div className="fighter-info">info</div>
+                  <div className="fighter-info">
+                    <p>{event.fighter}</p>
+                  </div>
                 </Col>
               </Row>
               <Row className="center m-3">Date/Time</Row>
@@ -71,7 +77,7 @@ class EventsList extends Component {
     if (!this.props.data.loading) {
       return (
         <div>
-          <Container>{this.renderEvents()}</Container>
+          <Container className="wrapper">{this.renderEvents()}</Container>
         </div>
       );
     }
