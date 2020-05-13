@@ -15,10 +15,11 @@
     // background-color: #fff;
 
     .fight-list {
+      @include flexCenter();
       border-bottom: $primary-color 2px solid;
       border-radius: 10px;
-      @include flexCenter();
       flex-direction: column;
+      margin: auto;
 
       .fighters-info {
         display: flex;
@@ -26,5 +27,12 @@
         color: $primary-color;
       }
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fight-list {
+    width: 70%;
+    margin: auto;
   }
 }

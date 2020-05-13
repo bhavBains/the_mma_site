@@ -191,8 +191,6 @@ a:hover {
 }
 
 .event-details .details-card .fight-list {
-  border-bottom: #e0777d 2px solid;
-  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,10 +200,13 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: #e0777d 2px solid;
+  border-radius: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: auto;
 }
 
 .event-details .details-card .fight-list .fighters-info {
@@ -216,6 +217,13 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #e0777d;
+}
+
+@media screen and (min-width: 768px) {
+  .fight-list {
+    width: 70%;
+    margin: auto;
+  }
 }
 
 #fighter-details .heading {

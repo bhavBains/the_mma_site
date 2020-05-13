@@ -56,14 +56,10 @@ class EventDetails extends Component {
 
               <h3 className="heading my-3">MAIN CARD</h3>
 
-              <ul className="list-group my-2 w-100">
-                {this.renderEventDetails()}
-              </ul>
+              <ul className="list-group w-100">{this.renderEventDetails()}</ul>
               <h3 className="heading my-3">UnderCARD</h3>
 
-              <ul className="list-group my-2 w-100">
-                {this.renderEventDetails()}
-              </ul>
+              <ul className="list-group w-100">{this.renderEventDetails()}</ul>
             </div>
           </Container>
         </div>
