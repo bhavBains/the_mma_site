@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .event-details {
@@ -11,28 +12,49 @@
 
   .details-card {
     @include flexCenter();
-    flex-direction: column;
-    // background-color: #fff;
 
-    .fight-list {
+    .fights {
       @include flexCenter();
-      border-bottom: $primary-color 2px solid;
-      border-radius: 10px;
-      flex-direction: column;
-      margin: auto;
 
-      .fighters-info {
-        display: flex;
-        justify-content: space-between;
-        color: $primary-color;
+      .fight-card {
+        @include flexCenter();
+
+        .fight-list {
+          @include flexCenter();
+          border-bottom: $primary-color 2px solid;
+          border-radius: 10px;
+          margin: 0;
+
+          .fighters {
+            color: $primary-color;
+
+            .fighters-info {
+              @include flexCenter();
+            }
+
+            h6 {
+              width: 80%;
+              text-transform: uppercase;
+              margin: 0;
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }
 }
 
 @media screen and (min-width: 768px) {
-  .fight-list {
-    width: 70%;
-    margin: auto;
+  .fights {
+    flex-direction: row !important;
+
+    .main-card {
+      margin-right: 2rem;
+    }
+
+    .under-card {
+      margin-left: 2rem;
+    }
   }
 }

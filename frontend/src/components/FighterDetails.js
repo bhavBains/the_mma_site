@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-// import PieChart from "./PieCharts";
 import FighterHistory from "./FighterHistory";
 
 class FighterDetails extends Component {
   render() {
     return (
-      <div id="fighter-details">
-        <Container>
+      <Container>
+        <div id="fighter-details">
           <h3 className="heading m-3 p-1">Jon "Bones" Jones</h3>
           <Row>
             <Col className="fighter-image">
@@ -21,70 +20,77 @@ class FighterDetails extends Component {
               />
             </Col>
           </Row>
-          <ul className="list-group mb-5 px-4">
-            <li className="list-group-item m-1">
-              <Row className="ml-2">
-                <Col xs="4">Age</Col>
-                <Col className="ml-3">31</Col>
-              </Row>
-            </li>
-            <li className="list-group-item m-1">
-              <Row className="ml-2">
-                <Col xs="4">weight class</Col>
-                <Col className="ml-3">lightweight</Col>
-              </Row>
-            </li>
-            <li className="list-group-item m-1">
-              <Row className="ml-2">
-                <Col xs="4">weight</Col>
-                <Col className="ml-3">205</Col>
-              </Row>
-            </li>
-            <li className="list-group-item m-1">
-              <Row className="ml-2">
-                <Col xs="4">record</Col>
-                <Col className="ml-3">20-1-0</Col>
-              </Row>
-            </li>
-            <li className="list-group-item m-1">
-              <Row className="ml-2">
-                <Col xs="4">birthdate</Col>
-                <Col className="ml-3">apr 20, 1989</Col>
-              </Row>
-            </li>
-            <li className="list-group-item m-1">
-              <Row className="ml-2">
-                <Col xs="4">hometown</Col>
-                <Col className="ml-3">new york</Col>
-              </Row>
-            </li>
-            <li className="list-group-item m-1">
-              <Row className="ml-2">
-                <Col xs="4">association</Col>
-                <Col className="ml-3">jacksons wink</Col>
-              </Row>
-            </li>
-            <li className="list-group-item m-1">
-              <Row className="ml-2">
-                <Col xs="4">nationality</Col>
-                <Col className="ml-3">usa</Col>
-              </Row>
-            </li>
-            <li className="list-group-item m-1">
-              <Row className="ml-2">
-                <Col xs="4">height</Col>
-                <Col className="ml-3">6'4" feets</Col>
-              </Row>
-            </li>
-          </ul>
-          <h3 className="heading">Fight Results</h3>
-          <FighterHistory />
-          <FighterHistory />
-          <FighterHistory />
-          <FighterHistory />
-          <FighterHistory />
-        </Container>
-      </div>
+          <div className="fighter-card">
+            <div className="fighter-info">
+              <h3 className="heading mb-2">info</h3>
+              <ul className="list-group mb-4">
+                <li className="list-group-item m-1">
+                  <Row className="ml-2">
+                    <Col xs="4">Age</Col>
+                    <Col className="ml-3">31</Col>
+                  </Row>
+                </li>
+                <li className="list-group-item m-1">
+                  <Row className="ml-2">
+                    <Col xs="4">weight class</Col>
+                    <Col className="ml-3">lightweight</Col>
+                  </Row>
+                </li>
+                <li className="list-group-item m-1">
+                  <Row className="ml-2">
+                    <Col xs="4">weight</Col>
+                    <Col className="ml-3">205</Col>
+                  </Row>
+                </li>
+                <li className="list-group-item m-1">
+                  <Row className="ml-2">
+                    <Col xs="4">record</Col>
+                    <Col className="ml-3">20-1-0</Col>
+                  </Row>
+                </li>
+                <li className="list-group-item m-1">
+                  <Row className="ml-2">
+                    <Col xs="4">birthdate</Col>
+                    <Col className="ml-3">apr 20, 1989</Col>
+                  </Row>
+                </li>
+                <li className="list-group-item m-1">
+                  <Row className="ml-2">
+                    <Col xs="4">hometown</Col>
+                    <Col className="ml-3">new york</Col>
+                  </Row>
+                </li>
+                <li className="list-group-item m-1">
+                  <Row className="ml-2">
+                    <Col xs="4">association</Col>
+                    <Col className="ml-3">jacksons wink</Col>
+                  </Row>
+                </li>
+                <li className="list-group-item m-1">
+                  <Row className="ml-2">
+                    <Col xs="4">nationality</Col>
+                    <Col className="ml-3">usa</Col>
+                  </Row>
+                </li>
+                <li className="list-group-item m-1">
+                  <Row className="ml-2">
+                    <Col xs="4">height</Col>
+                    <Col className="ml-3">6'4" feets</Col>
+                  </Row>
+                </li>
+              </ul>
+            </div>
+            <div className="fighter-results">
+              <h3 className="heading">fight results</h3>
+              <FighterHistory />
+              <FighterHistory />
+              <FighterHistory />
+              <FighterHistory />
+              <FighterHistory />
+            </div>
+          </div>
+        </div>
+      </Container>
     );
   }
 }

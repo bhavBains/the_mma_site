@@ -5,14 +5,14 @@ class FighterHistory extends Component {
     return (
       <div id="fighter-history">
         <ul className="list-group">
-          <li className="list-group-item p-3 shadow">
+          <li className="list-group-item p-3 my-2 shadow">
             <h6>UFC 182 - Jones vs Cormier</h6>
             <p>
               Jan 03, 2015 <span> ~ Refree: Herb dean</span>
             </p>
 
             <div className="fight-result p-3 mx-3">
-              <h5 className="heading">WIN</h5>
+              <h5 className="heading mr-3">WIN</h5>
               <h6>VS</h6>
               <div className="result-opponent">
                 <img
