@@ -28,7 +28,7 @@ const fakeData = {
       eventTitle: "ufc 249",
     },
     {
-      id: "5e98f57282418f91ead3dc88",
+      id: "5e98f57282418f91ead3dc",
       fighter: "Khabib nurmagadove",
       eventTitle: "ufc 249",
     },
@@ -42,12 +42,33 @@ const {
   GraphQLList,
 } = graphql;
 
-const EventType = new GraphQLObjectType({
-  name: "Events",
+const EventsType = new GraphQLObjectType({
+  name: "Events_upcoming",
   fields: () => ({
     id: { type: GraphQLString },
-    eventTitle: { type: GraphQLString },
-    fighter: { type: GraphQLString },
+    eventName: { type: GraphQLString },
+    weightClass: { type: GraphQLString },
+    fighterNameRed: { type: GraphQLString },
+    fighterImageRed: { type: GraphQLString },
+    fighterNameBlue: { type: GraphQLString },
+    fighterImageBlue: { type: GraphQLString },
+    dateAndTime: { type: GraphQLString },
+    eventLocation: { type: GraphQLString },
+  }),
+});
+
+const EventDetailsType = new GraphQLObjectType({
+  name: "Event_Details",
+  fields: () => ({
+    id: { type: GraphQLString },
+    eventName: { type: GraphQLString },
+    weightClass: { type: GraphQLString },
+    fighterNameRed: { type: GraphQLString },
+    fighterImageRed: { type: GraphQLString },
+    fighterNameBlue: { type: GraphQLString },
+    fighterImageBlue: { type: GraphQLString },
+    dateAndTime: { type: GraphQLString },
+    eventLocation: { type: GraphQLString },
   }),
 });
 
@@ -62,8 +83,20 @@ const FighterType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
-    events: {
-      type: new GraphQLList(EventType),
+    upcomingEvents: {
+      type: new GraphQLList(EventsType),
+      resolve(parentValue, args) {
+        return fakeData.event;
+      },
+    },
+    pastEvents: {
+      type: new GraphQLList(EventsType),
+      resolve(parentValue, args) {
+        return fakeData.event;
+      },
+    },
+    eventDetails: {
+      type: EventDetailsType,
       resolve(parentValue, args) {
         return fakeData.event;
       },

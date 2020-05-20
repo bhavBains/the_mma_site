@@ -9,10 +9,13 @@ class EventsList extends Component {
     super(props);
 
     this._eventCard = React.createRef();
+
+    // console.log(this.props.data);
   }
 
   renderEvents = () => {
-    return this.props.data.events.map((event) => {
+    // console.log(this.props);
+    return this.props.data.upcomingEvents.map((event) => {
       return (
         <li className="event-list" key={event.id}>
           <Link to="/details">
@@ -21,7 +24,7 @@ class EventsList extends Component {
               ref={this._eventCard}
             >
               <Row style={{ flexDirection: "column" }}>
-                <Col className="center m-1">{event.eventTitle}</Col>
+                <Col className="center m-1">{event.eventName}</Col>
                 <Col className="center m-1">Lightweight bout</Col>
               </Row>
               <Row>
@@ -36,7 +39,7 @@ class EventsList extends Component {
                     />
                   </div>
                   <div className="fighter-info">
-                    <p>{event.fighter}</p>
+                    <p>{event.fighterNameRed}</p>
                   </div>
                 </Col>
                 <Col xs={2} className="center">
@@ -53,7 +56,7 @@ class EventsList extends Component {
                     />
                   </div>
                   <div className="fighter-info">
-                    <p>{event.fighter}</p>
+                    <p>{event.fighterNameRed}</p>
                   </div>
                 </Col>
               </Row>
@@ -67,7 +70,7 @@ class EventsList extends Component {
   };
 
   componentDidUpdate() {
-    console.log(this._eventCard);
+    console.log(this.props.data);
   }
 
   render() {
@@ -86,10 +89,11 @@ class EventsList extends Component {
 
 const eventsQuery = gql`
   {
-    events {
+    upcomingEvents {
       id
-      fighter
-      eventTitle
+      eventName
+      eventLocation
+      fighterNameRed
     }
   }
 `;
