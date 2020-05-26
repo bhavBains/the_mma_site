@@ -62,7 +62,7 @@ class EventDetails extends Component {
                   <ul className="list-group">{this.renderEventDetails()}</ul>
                 </div>
                 <div className="under-card fight-card">
-                  <h3 className="heading my-3">UNDER CARD</h3>
+                  <h3 className="heading my-3">UNDER CARD (test)</h3>
                   <ul className="list-group">{this.renderEventDetails()}</ul>
                 </div>
               </div>
