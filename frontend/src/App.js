@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.css";
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 // Import all components here
 import Header from "./components/Header";
@@ -17,11 +17,11 @@ function App() {
       <Header />
       <DarkMode />
       <VideoBackground />
-      <BrowserRouter>
+      <Switch>
         <Route exact path="/" component={EventsList} />
-        <Route exact path="/details" component={EventDetails} />
-        <Route exact path="/fighter" component={FighterDetails} />
-      </BrowserRouter>
+        <Route path="/details" component={EventDetails} />
+        <Route path="/fighter" component={FighterDetails} />
+      </Switch>
     </div>
   );
 }

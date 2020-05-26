@@ -9,12 +9,9 @@ class EventsList extends Component {
     super(props);
 
     this._eventCard = React.createRef();
-
-    // console.log(this.props.data);
   }
 
   renderEvents = () => {
-    // console.log(this.props);
     return this.props.data.upcomingEvents.map((event) => {
       return (
         <li className="event-list" key={event.id}>
