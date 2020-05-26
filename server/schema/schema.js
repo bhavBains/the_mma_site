@@ -5,32 +5,32 @@ const fakeData = {
     {
       id: "5e98f5729c89c17c0563aabf",
       fighter: "Ruby Nelson",
-      eventTitle: "KLUGGER",
+      eventName: "KLUGGER",
     },
     {
       id: "5e98f5727e5ec38797c379e5",
       fighter: "Ruth Santana",
-      eventTitle: "REALMO",
+      eventName: "REALMO",
     },
     {
       id: "5e98f572560d5aa64cf94f7d",
       fighter: "Woodard Everett",
-      eventTitle: "COMVERGES",
+      eventName: "COMVERGES",
     },
     {
       id: "5e98f572400971e281506d8e",
       fighter: "Sonya Acosta",
-      eventTitle: "HOPELI",
+      eventName: "HOPELI",
     },
     {
       id: "5e98f57282418f91ead3dc88",
       fighter: "Khabib nurmagadove",
-      eventTitle: "ufc 249",
+      eventName: "ufc 249",
     },
     {
       id: "5e98f57282418f91ead3dc",
       fighter: "Khabib nurmagadove",
-      eventTitle: "ufc 249",
+      eventName: "ufc 249",
     },
   ],
 };

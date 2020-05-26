@@ -8,7 +8,8 @@ class EventDetails extends Component {
   renderEventDetails() {
     // Need event details data
     // map over main card and undercard array list
-    return this.props.data.events.map(({ fighter, id }) => {
+    console.log(this.props.data)
+    return this.props.data.upcomingEvents.map(({ eventName, id }) => {
       return (
         <li key={id} className="fight-list list-group-item p-2 my-2 shadow">
           <h6 className="sub-heading my-2">Lightweight</h6>
@@ -22,7 +23,7 @@ class EventDetails extends Component {
                   height="80px"
                   width="80px"
                 />
-                <h6 className="px-1">{fighter}</h6>
+                <h6 className="px-1">{eventName}</h6>
                 <h6 className="px-1">18-4-0</h6>
               </Link>
             </div>
@@ -76,10 +77,11 @@ class EventDetails extends Component {
 
 const eventDetailsQuery = gql`
   {
-    events {
+    upcomingEvents {
       id
-      fighter
-      eventTitle
+      eventName
+      eventLocation
+      fighterNameRed
     }
   }
 `;
